@@ -1,0 +1,14 @@
+//closure definition
+//A closure is a function that has access to its own scope, 
+// the outer function's scope, and the global scope, even after the outer function has returned.
+
+//Example of closure    
+function outerFunction(outerVariable) {
+    return function innerFunction(innerVariable) {
+        console.log('Outer Variable: ' + outerVariable);
+        console.log('Inner Variable: ' + innerVariable);
+    }
+}
+
+const newFunction = outerFunction('outside');
+newFunction('inside');
